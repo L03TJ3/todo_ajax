@@ -1,11 +1,14 @@
 class TodosController < ApplicationController
-  before_action :set_todo, only: [:show, :edit, :update, :destroy]
+  before_action :set_todo, only: [:show, :update, :destroy]
 
   # GET /todos
   # GET /todos.json
   def index
     @todo = Todo.new
     @todos = Todo.all
+  end
+
+  def show
   end
 
   # POST /todos
@@ -32,7 +35,7 @@ class TodosController < ApplicationController
         format.html { redirect_to @todo, notice: 'Todo was successfully updated.' }
         format.json { render :show, status: :ok, location: @todo }
       else
-        format.html { render :edit }
+        format.html { render :index }
         format.json { render json: @todo.errors, status: :unprocessable_entity }
       end
     end
