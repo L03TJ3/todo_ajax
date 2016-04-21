@@ -23,7 +23,7 @@ function toggleDone() {
         listItem.removeClass("completed");
       }
       updateCounters();
-    });
+   });
 }
 
 function updateCounters() {
