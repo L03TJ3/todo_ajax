@@ -36,8 +36,12 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
   gem 'capybara'
-  gem 'rspec'
+  gem 'rspec-rails'
   gem 'selenium-webdriver'
+end
+
+group :test do
+  gem  'database_cleaner'
 end
 
 group :development do
